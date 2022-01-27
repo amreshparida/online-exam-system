@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Exam Explorer - Dashboard</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Exam Explorer - Online Exam System">
+    <meta name="author" content="Amaresh Parida">    
+    <link rel="shortcut icon" href="assets/images/icon/favicon.ico"> 
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+    
+    <!-- App CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+    <script src="assets/js/datatable/index.js"></script>
+
+    <style>
+        #SearchControl{
+            width:100% !important;
+            margin-left: 0 !important;
+        }
+    </style>
+
+</head> 
+
+<body class="app">   	
+    <header class="app-header fixed-top">	   	            
+        <div class="app-header-inner">  
+	        <div class="container-fluid py-2">
+		        <div class="app-header-content"> 
+		            <div class="row justify-content-between align-items-center">
+			        
+				    <div class="col-auto">
+					  <img src="assets/images/icon/logo-full.png" style="width:100%; height:44px;" alt="logo" />
+				    </div>
+		            
+		            <div class="app-utilities col-auto">   
+			            <div class="app-utility-item app-user-dropdown dropdown">
+				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" class="rounded-circle" alt="user profile"></a>
+				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
+							</ul>
+			            </div><!--//app-user-dropdown--> 
+		            </div><!--//app-utilities-->
+		        </div><!--//row-->
+	            </div><!--//app-header-content-->
+	        </div><!--//container-fluid-->
+        </div><!--//app-header-inner-->
+      
+    </header><!--//app-header-->
+    
+    <div class="app-wrapper">
+	    
+	    <div class="app-content pt-3 p-md-3 p-lg-4">
+		    <div class="container-xl">
+
+
+			    
+			    <div class="row g-3 mb-4">
+				    <div class="col-md-4">
+                        <div class="card" style="width:100%">
+                            <img src="assets/images/user.png" class="img-thumbnail mx-auto mt-5" style="width:200px; height:200px;" alt="candidate">
+                            <div class="card-body">
+                                <div class="app-card-body px-4 w-100">
+                                    
+                                  
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Full Name</strong></div>
+                                                <div class="item-data">Amaresh Parida</div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Registered Email</strong></div>
+                                                <div class="item-data">amaresh@gmail.com</div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+
+                                    <div class="item border-bottom py-3">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-auto">
+                                                <div class="item-label"><strong>Registered Mobile</strong></div>
+                                                <div class="item-data">+91-9093924535</div>
+                                            </div><!--//col-->
+                                        </div><!--//row-->
+                                    </div><!--//item-->
+                                   
+                                   
+                                </div><!--//app-card-body-->
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="app-card app-card-chart h-100 shadow-sm">
+					        
+					        <div class="app-card-body p-4">					   
+						        <div class="table-responsive">
+                                    <table class="table table-bordered" id="myTable" border="1">
+                                        <thead>
+                                            <tr>
+                                                <th>Exam Subject</th>
+                                                <th>Exam Date</th>
+                                                <th>Exam Duration</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Exam Subject</td>
+                                                <td>Exam Date</td>
+                                                <td>Exam Duration</td>
+                                                <td><button class="btn-sm app-btn-secondary w-100">Take Test</button></td>
+                                            </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+					        </div><!--//app-card-body-->
+				        </div><!--//app-card-->
+                    </div>
+			    </div><!--//row-->
+			   
+			    
+			
+				
+				
+			    
+		    </div><!--//container-fluid-->
+	    </div><!--//app-content-->
+	    
+	    
+	    
+    </div><!--//app-wrapper-->    					
+
+ 
+    <!-- Javascript -->  
+    <script>
+    
+        let x = new RdataTB('myTable',{
+            ShowSearch:true, // show search field,
+            ShowSelect:false, // show show select,
+            ShowPaginate:false, // show paginate ,        
+        });
+    
+    </script>        
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/js/app.js"></script> 
+
+</body>
+</html> 
+
