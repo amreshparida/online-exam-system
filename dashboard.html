@@ -17,12 +17,16 @@
     
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
-    <script src="assets/js/datatable/index.js"></script>
+    <script src="assets/plugins/datatable/index.js"></script>
 
     <style>
         #SearchControl{
             width:100% !important;
             margin-left: 0 !important;
+        }
+
+        .asterisk{
+            display:none;
         }
     </style>
 
@@ -104,23 +108,26 @@
                     <div class="col-md-8">
                         <div class="app-card app-card-chart h-100 shadow-sm">
 					        
-					        <div class="app-card-body p-4">					   
-						        <div class="table-responsive">
+					        <div class="app-card-body p-4">	
+                              
+                                            <img class="w-100 mx-3" style="height:240px;" src="assets/images/background/background-2.jpg" />
+                                        		   
+						        <div class="table-responsive mt-2">
                                     <table class="table table-bordered" id="myTable" border="1">
                                         <thead>
                                             <tr>
                                                 <th>Exam Subject</th>
-                                                <th>Exam Date</th>
+                                                <th>Exam Date & Time</th>
                                                 <th>Exam Duration</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Exam Subject</td>
+                                                <td>Python</td>
                                                 <td>Exam Date</td>
                                                 <td>Exam Duration</td>
-                                                <td><button class="btn-sm app-btn-secondary w-100">Take Test</button></td>
+                                                <td><button class="btn app-btn-primary w-100">Take Test</button></td>
                                             </tr>
                                         </tbody>
                                       </table>
