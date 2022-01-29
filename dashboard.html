@@ -18,6 +18,7 @@
     <!-- App CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
     <script src="assets/plugins/datatable/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <style>
         #SearchControl{
@@ -28,7 +29,40 @@
         .asterisk{
             display:none;
         }
-    </style>
+            /* stepper form */
+            
+       
+        .stepwizard-row {
+            display: table-row;
+        }
+        .stepwizard {
+            display: table;
+            width: 100%;
+            position: relative;
+            margin-bottom: -20px;
+        }
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+        }
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+
+
+
+</style>
 
 </head> 
 
@@ -127,7 +161,7 @@
                                                 <td>Python</td>
                                                 <td>Exam Date</td>
                                                 <td>Exam Duration</td>
-                                                <td><button class="btn app-btn-primary w-100">Take Test</button></td>
+                                                <td><button onclick="instruction_modal();" class="btn app-btn-primary w-100">Take Test</button></td>
                                             </tr>
                                         </tbody>
                                       </table>
@@ -147,7 +181,92 @@
 	    
 	    
 	    
-    </div><!--//app-wrapper-->    					
+    </div><!--//app-wrapper-->    	
+    
+    <!-- The Modal -->
+<div class="modal" id="examInstructionModal">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <div class="stepwizard col-md-offset-3">
+                <div class="stepwizard-row setup-panel">
+                  <div class="stepwizard-step">
+                    <a href="#step-1" type="button"  class="btn btn-success btn-circle">1</a>
+                    <p>Exam Instruction</p>
+                  </div>
+                  <div class="stepwizard-step">
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                    <p>Exam Information</p>
+                  </div>
+                  <div class="stepwizard-step">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p>Ready to Start</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+            
+
+            <div class="row setup-content" id="step-1">
+                    
+                <div class="col-12">
+                    <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam tempor orci eu lobortis elementum nibh. Consectetur adipiscing elit pellentesque habitant morbi. Et ligula ullamcorper malesuada proin libero nunc consequat. Amet luctus venenatis lectus magna fringilla. Aliquet nec ullamcorper sit amet risus nullam. Faucibus turpis in eu mi bibendum neque. Eget magna fermentum iaculis eu non. At consectetur lorem donec massa sapien faucibus et. Purus gravida quis blandit turpis cursus in. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Nibh praesent tristique magna sit amet purus gravida. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Aliquam purus sit amet luctus. Et ligula ullamcorper malesuada proin libero nunc consequat. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Elit duis tristique sollicitudin nibh sit. Nunc sed id semper risus in hendrerit gravida. Libero enim sed faucibus turpis. Magna sit amet purus gravida. Molestie a iaculis at erat pellentesque. Nisl tincidunt eget nullam non nisi est. Nulla at volutpat diam ut. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Tincidunt vitae semper quis lectus nulla at volutpat. Arcu vitae elementum curabitur vitae. Viverra suspendisse potenti nullam ac tortor. Sed augue lacus viverra vitae congue eu consequat. Adipiscing diam donec adipiscing tristique. Mauris a diam maecenas sed. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sed nisi lacus sed viverra tellus in. Vitae tempus quam pellentesque nec nam aliquam. Urna duis convallis convallis tellus id. Augue ut lectus arcu bibendum at varius vel. Scelerisque varius morbi enim nunc faucibus. Fames ac turpis egestas integer eget aliquet nibh praesent. Nibh sed pulvinar proin gravida hendrerit lectus. Id diam maecenas ultricies mi eget mauris pharetra et. Nulla pharetra diam sit amet nisl suscipit. Duis convallis convallis tellus id. At tempor commodo ullamcorper a lacus vestibulum. Mattis aliquam faucibus purus in massa. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Erat pellentesque adipiscing commodo elit. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Tellus in metus vulputate eu scelerisque felis imperdiet. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquet porttitor lacus luctus accumsan tortor. Tellus pellentesque eu tincidunt tortor aliquam. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Bibendum est ultricies integer quis auctor elit sed. Vel facilisis volutpat est velit. Eu ultrices vitae auctor eu augue ut lectus. In iaculis nunc sed augue. Ultricies leo integer malesuada nunc vel risus commodo. Augue ut lectus arcu bibendum at varius vel. Blandit turpis cursus in hac. Sodales neque sodales ut etiam sit amet nisl purus. Amet luctus venenatis lectus magna fringilla. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Quis viverra nibh cras pulvinar mattis. Volutpat sed cras ornare arcu dui vivamus arcu felis. At consectetur lorem donec massa sapien faucibus et molestie. Tellus molestie nunc non blandit massa enim. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Odio facilisis mauris sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Id velit ut tortor pretium viverra. Amet porttitor eget dolor morbi non arcu risus quis. Mauris ultrices eros in cursus. Orci sagittis eu volutpat odio. Rutrum quisque non tellus orci ac auctor augue. Vel pharetra vel turpis nunc eget lorem. Vulputate enim nulla aliquet porttitor lacus. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Quisque non tellus orci ac auctor augue. Aliquam ut porttitor leo a diam sollicitudin. A erat nam at lectus urna duis. Eros donec ac odio tempor orci. In tellus integer feugiat scelerisque varius morbi enim. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Etiam tempor orci eu lobortis elementum. Nulla aliquet enim tortor at. Enim facilisis gravida neque convallis a cras semper. Et netus et malesuada fames ac turpis egestas integer eget. Molestie nunc non blandit massa enim nec dui nunc. Sit amet mattis vulputate enim nulla aliquet. Risus viverra adipiscing at in. Convallis posuere morbi leo urna molestie at. Ultrices gravida dictum fusce ut placerat. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt.
+                    </p>
+                    <hr/>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <button type="button" data-bs-dismiss="modal" class="btn btn-basic btn-block"  style="background:#E6E6E6; height:40px;"><< Previous</button>
+                        </div>
+                        
+                        <div class="col-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-success nextBtn btn-block" style="height:40px;" >Next >></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row setup-content" id="step-2">
+                    
+                <div class="col-12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Etiam tempor orci eu lobortis elementum nibh. Consectetur adipiscing elit pellentesque habitant morbi. Et ligula ullamcorper malesuada proin libero nunc consequat. Amet luctus venenatis lectus magna fringilla. Aliquet nec ullamcorper sit amet risus nullam. Faucibus turpis in eu mi bibendum neque. Eget magna fermentum iaculis eu non. At consectetur lorem donec massa sapien faucibus et. Purus gravida quis blandit turpis cursus in. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Nibh praesent tristique magna sit amet purus gravida. Consectetur adipiscing elit ut aliquam purus sit amet luctus venenatis. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Aliquam purus sit amet luctus. Et ligula ullamcorper malesuada proin libero nunc consequat. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Elit duis tristique sollicitudin nibh sit. Nunc sed id semper risus in hendrerit gravida. Libero enim sed faucibus turpis. Magna sit amet purus gravida. Molestie a iaculis at erat pellentesque. Nisl tincidunt eget nullam non nisi est. Nulla at volutpat diam ut. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Malesuada fames ac turpis egestas sed tempus urna et pharetra. Tincidunt vitae semper quis lectus nulla at volutpat. Arcu vitae elementum curabitur vitae. Viverra suspendisse potenti nullam ac tortor. Sed augue lacus viverra vitae congue eu consequat. Adipiscing diam donec adipiscing tristique. Mauris a diam maecenas sed. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sed nisi lacus sed viverra tellus in. Vitae tempus quam pellentesque nec nam aliquam. Urna duis convallis convallis tellus id. Augue ut lectus arcu bibendum at varius vel. Scelerisque varius morbi enim nunc faucibus. Fames ac turpis egestas integer eget aliquet nibh praesent. Nibh sed pulvinar proin gravida hendrerit lectus. Id diam maecenas ultricies mi eget mauris pharetra et. Nulla pharetra diam sit amet nisl suscipit. Duis convallis convallis tellus id. At tempor commodo ullamcorper a lacus vestibulum. Mattis aliquam faucibus purus in massa. Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Erat pellentesque adipiscing commodo elit. Pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Tellus in metus vulputate eu scelerisque felis imperdiet. Hac habitasse platea dictumst quisque sagittis purus sit amet volutpat. Vitae sapien pellentesque habitant morbi tristique senectus et netus. Nullam ac tortor vitae purus. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Aliquet porttitor lacus luctus accumsan tortor. Tellus pellentesque eu tincidunt tortor aliquam. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Bibendum est ultricies integer quis auctor elit sed. Vel facilisis volutpat est velit. Eu ultrices vitae auctor eu augue ut lectus. In iaculis nunc sed augue. Ultricies leo integer malesuada nunc vel risus commodo. Augue ut lectus arcu bibendum at varius vel. Blandit turpis cursus in hac. Sodales neque sodales ut etiam sit amet nisl purus. Amet luctus venenatis lectus magna fringilla. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Quis viverra nibh cras pulvinar mattis. Volutpat sed cras ornare arcu dui vivamus arcu felis. At consectetur lorem donec massa sapien faucibus et molestie. Tellus molestie nunc non blandit massa enim. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Odio facilisis mauris sit amet. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Id velit ut tortor pretium viverra. Amet porttitor eget dolor morbi non arcu risus quis. Mauris ultrices eros in cursus. Orci sagittis eu volutpat odio. Rutrum quisque non tellus orci ac auctor augue. Vel pharetra vel turpis nunc eget lorem. Vulputate enim nulla aliquet porttitor lacus. In pellentesque massa placerat duis ultricies lacus sed turpis tincidunt. Quisque non tellus orci ac auctor augue. Aliquam ut porttitor leo a diam sollicitudin. A erat nam at lectus urna duis. Eros donec ac odio tempor orci. In tellus integer feugiat scelerisque varius morbi enim. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Etiam tempor orci eu lobortis elementum. Nulla aliquet enim tortor at. Enim facilisis gravida neque convallis a cras semper. Et netus et malesuada fames ac turpis egestas integer eget. Molestie nunc non blandit massa enim nec dui nunc. Sit amet mattis vulputate enim nulla aliquet. Risus viverra adipiscing at in. Convallis posuere morbi leo urna molestie at. Ultrices gravida dictum fusce ut placerat. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt.
+                    </p>
+                    <hr/>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <button type="button"  class="btn btn-basic prevBtn btn-block"  style="background:#E6E6E6; height:40px;"><< Previous</button>
+                        </div>
+                        
+                        <div class="col-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-success nextBtn btn-block" style="height:40px;" >Next >></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="row setup-content" id="step-3">
+                    
+                <div class="col-12">
+                    33
+                </div>
+                
+            </div>
+
+        </div>
+  
+       
+      </div>
+    </div>
+</div>
 
  
     <!-- Javascript -->  
@@ -159,7 +278,107 @@
             ShowPaginate:false, // show paginate ,        
         });
     
-    </script>        
+    </script>   
+    
+    <script>
+    
+    
+        $(document).ready(function () {
+      var navListItems = $('div.setup-panel div a'),
+              allWells = $('.setup-content'),
+              allNextBtn = $('.nextBtn'),
+                allPrevBtn = $('.prevBtn');
+    
+      allWells.hide();
+    
+      navListItems.click(function (e) {
+          e.preventDefault();
+          var $target = $($(this).attr('href')),
+                  $item = $(this);
+    
+          if (!$item.hasClass('disabled')) {
+              navListItems.removeClass('btn-success').addClass('btn-default');
+              $item.addClass('btn-success');
+              allWells.hide();
+              $target.show();
+              $target.find('input:eq(0)').focus();
+          }
+      });
+      
+      allPrevBtn.click(function(){
+          var curStep = $(this).closest(".setup-content"),
+              curStepBtn = curStep.attr("id"),
+              prevStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+              prevStepWizard.removeAttr('disabled').trigger('click');
+      });
+    
+      allNextBtn.click(function(){
+          var curStep = $(this).closest(".setup-content"),
+              curStepBtn = curStep.attr("id"),
+              nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+              curInputs = curStep.find("input[type='text'],input[type='url']"),
+              isValid = true;
+    
+          $(".form-group").removeClass("has-error");
+          for(var i=0; i<curInputs.length; i++){
+              if (!curInputs[i].validity.valid){
+                  isValid = false;
+                  $(curInputs[i]).closest(".form-group").addClass("has-error");
+              }
+          }
+              nextStepWizard.removeAttr('disabled').trigger('click');
+      });
+    
+      $('div.setup-panel div a.btn-success').trigger('click');
+    });
+        
+        
+        function gotosummary(b)
+        {
+            
+            if($('#delivery_address').val() != "" && $('#delivery_landmark').val() != "")
+            {
+                 var curStep = $(b).closest(".setup-content"),
+                 curStepBtn = curStep.attr("id"),
+                 nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                curInputs = curStep.find("input[type='text'],input[type='url']"),
+                isValid = true;
+    
+                $(".form-group").removeClass("has-error");
+                for(var i=0; i<curInputs.length; i++){
+                    if (!curInputs[i].validity.valid){
+                        isValid = false;
+                        $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    }
+                }
+                nextStepWizard.removeAttr('disabled').trigger('click');
+            }
+            
+            if($('#delivery_address').val() === "" )
+            {
+                 document.getElementById("delivery_address").focus();
+            }
+            
+            if($('#delivery_landmark').val() === "" )
+            {
+                 document.getElementById("delivery_landmark").focus();
+            }
+            
+           
+        }
+
+        function instruction_modal()
+        {
+            $('#examInstructionModal').modal('show')  
+                
+        }
+        
+        
+        
+        
+    </script>
+
+
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
     
